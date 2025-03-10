@@ -8,6 +8,8 @@
   "description": "Webb-app esercizio Film ",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
+    "watch": "node --env-file=.env --watch app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
