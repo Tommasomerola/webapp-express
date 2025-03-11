@@ -2,10 +2,10 @@ const mysql = require ("mysql2")
 
 // creiamo la connessione a mysql 
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root", 
-    password: "Tommi2004!", 
-    database: "webapp-express" 
+    host: process.env.DB_HOST || 'localhost',
+     user: process.env.DB_USER,
+     password: process.env.DB_PASSWORD,
+     database: process.env.DB_NAME
 })
 
 connection.connect((err) => {
